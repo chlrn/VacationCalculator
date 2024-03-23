@@ -1,0 +1,12 @@
+version: '3.8'
+
+services:
+  vacation-calculator:
+    image: openjdk:11-jdk-alpine
+    volumes:
+      - ./build/libs:/app
+    command: java -jar /app/vacation_calculator.jar
+    ports:
+      - "8081:8081"
+
+
